@@ -19,9 +19,9 @@ export function Navbar() {
         {/* Logo - Sans Serif, Bold, Uppercase */}
         <Link
           href="/"
-          className="font-sans text-2xl font-bold uppercase tracking-tighter text-black"
+          className="font-sans text-xl font-black uppercase tracking-tighter text-black"
         >
-          Clarity.
+          The White Line.
         </Link>
 
         {/* Desktop Navigation - Sans Serif, Spaced, Uppercase */}
