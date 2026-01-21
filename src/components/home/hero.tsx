@@ -34,7 +34,8 @@ export function Hero() {
         <p className="mx-auto mb-12 max-w-2xl font-serif text-lg leading-relaxed text-neutral-600 md:text-xl">
           An objective, judgment-free archive of pharmacological facts,
           historical context, and harm reduction strategies for cocaine users.
-          Understanding the mechanism is the first step towards safety.
+          Understanding the mechanism is the first step towards safety. It is
+          time to break the stigma, and learn how to help.
         </p>
 
         {/* Action Buttons */}
