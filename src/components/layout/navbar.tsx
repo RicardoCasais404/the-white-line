@@ -47,12 +47,12 @@ export function Navbar() {
               </Link>
             ))}
 
-            {/* Emergency Button (Desktop) */}
+            {/* Emergency Button (Desktop) - UPDATED TEXT */}
             <Link
               href="/knowledge/reduction"
               className="bg-black px-6 py-3 font-sans text-xs font-bold tracking-widest text-white uppercase hover:bg-neutral-800"
             >
-              Protocol
+              Harm Reduction Protocols
             </Link>
           </div>
 
@@ -86,12 +86,14 @@ export function Navbar() {
                   {item.name}
                 </Link>
               ))}
+
+              {/* Mobile Button - UPDATED TEXT */}
               <Link
                 href="/knowledge/reduction"
                 onClick={() => setIsOpen(false)}
                 className="w-full bg-black py-4 text-center font-sans text-sm font-bold tracking-widest text-white uppercase"
               >
-                Emergency Protocol
+                Harm Reduction Protocols
               </Link>
             </div>
           </motion.div>
