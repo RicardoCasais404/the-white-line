@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
-  { name: "The Archive", href: "/knowledge" },
+  { name: "The Index", href: "/knowledge" },
   { name: "Safety Tools", href: "/tools" },
   { name: "Interaction Check", href: "/tools/interactions" },
 ];
@@ -37,20 +37,24 @@ export function Navbar() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "font-sans text-xs font-semibold tracking-[0.15em] uppercase transition-all",
+                  "font-sans text-xs font-bold tracking-[0.15em] uppercase transition-all",
+                  // REFINED STYLING:
+                  // decoration-1 = 1px thickness (Elegant)
+                  // underline-offset-8 = Distance from text
+                  "underline decoration-neutral-300 decoration-1 underline-offset-8 hover:text-black hover:decoration-black",
                   pathname === item.href
-                    ? "text-black underline underline-offset-8"
-                    : "text-neutral-500 hover:text-black",
+                    ? "text-black decoration-black"
+                    : "text-neutral-600",
                 )}
               >
                 {item.name}
               </Link>
             ))}
 
-            {/* Emergency Button (Desktop) - UPDATED TEXT */}
+            {/* Emergency Button (Desktop) */}
             <Link
               href="/knowledge/reduction"
-              className="bg-black px-6 py-3 font-sans text-xs font-bold tracking-widest text-white uppercase hover:bg-neutral-800"
+              className="bg-black px-6 py-3 font-sans text-xs font-bold tracking-widest text-white uppercase transition-transform hover:scale-105 hover:bg-neutral-800"
             >
               Harm Reduction Protocols
             </Link>
@@ -81,13 +85,13 @@ export function Navbar() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className="font-sans text-xl font-bold tracking-widest text-neutral-800 uppercase"
+                  // Thinner border here too (border-b instead of border-b-2)
+                  className="w-max border-b border-neutral-100 pb-1 font-sans text-xl font-bold tracking-widest text-neutral-800 uppercase"
                 >
                   {item.name}
                 </Link>
               ))}
 
-              {/* Mobile Button - UPDATED TEXT */}
               <Link
                 href="/knowledge/reduction"
                 onClick={() => setIsOpen(false)}
