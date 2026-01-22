@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Lora } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { Navbar } from "@/components/layout/navbar"; // <--- This was missing
+import { Navbar } from "@/components/layout/navbar";
 
 const geistSans = Geist({
   variable: "--font-sans",
@@ -17,7 +17,7 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "CLARITY.",
+  title: "THE WHITE LINE",
   description: "Information without judgment.",
 };
 
@@ -30,7 +30,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-white text-neutral-900 font-serif antialiased",
+          "min-h-screen bg-white font-serif text-neutral-900 antialiased",
           geistSans.variable,
           lora.variable,
         )}

@@ -95,7 +95,12 @@ export default function InteractionChecker() {
                 key={item.id}
                 className="group border border-neutral-100 bg-white p-6 transition-all hover:border-black md:p-8"
               >
-                <div className="mb-4 flex flex-wrap items-start justify-between gap-4">
+                {/*
+                    UPDATED LAYOUT:
+                    flex-col for mobile (vertical stack),
+                    md:flex-row for desktop (horizontal)
+                */}
+                <div className="mb-4 flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                   <div>
                     <h3 className="font-sans text-xl font-bold tracking-wide text-black uppercase">
                       {item.name}
@@ -105,15 +110,17 @@ export default function InteractionChecker() {
                     </span>
                   </div>
 
-                  {/* Risk Badge */}
-                  <div
-                    className={cn(
-                      "flex items-center gap-2 rounded-full border px-4 py-1.5 font-sans text-xs font-bold tracking-widest uppercase",
-                      getRiskStyles(item.risk),
-                    )}
-                  >
-                    {getRiskIcon(item.risk)}
-                    {item.risk}
+                  {/* self-start ensures the badge doesn't stretch to full width on mobile */}
+                  <div className="self-start">
+                    <div
+                      className={cn(
+                        "flex items-center gap-2 rounded-full border px-4 py-1.5 font-sans text-xs font-bold tracking-widest uppercase",
+                        getRiskStyles(item.risk),
+                      )}
+                    >
+                      {getRiskIcon(item.risk)}
+                      {item.risk}
+                    </div>
                   </div>
                 </div>
 
